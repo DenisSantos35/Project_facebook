@@ -17,26 +17,55 @@ User usuarioAtual = User(
 List<User> usuariosOnline = [
   User(
       name: "José Renato de almeida",
-      urlImage: "https://source.unsplash.com/UJLAMjEjISo/800x600"),
+      urlImage: "https://picsum.photos/seed/picsum/200/300"),
   User(
       name: "Maria Almeida",
-      urlImage: "https://source.unsplash.com/0wRXAXqIp58/800x600"),
+      urlImage: "https://picsum.photos/200/300?grayscale"),
   User(
       name: "Fernando Lima de albuquerque filho",
-      urlImage: "https://source.unsplash.com/59HOrlAKTOU/800x600"),
+      urlImage: "https://picsum.photos/200/300?grayscale"),
   User(
       name: "Marcela Faria",
-      urlImage: "https://source.unsplash.com/GXzHGgzraHc/800x600"),
+      urlImage: "https://picsum.photos/id/870/200/300?grayscale&blur=2"),
   User(
       name: "Carlos Eduardo",
-      urlImage: "https://source.unsplash.com/y8yimL21z8s/800x600"),
-  User(
-      name: "Joana Santos",
-      urlImage: "https://source.unsplash.com/PXWiHU7pbeg/800x600"),
+      urlImage: "https://picsum.photos/200/300?grayscale"),
+  User(name: "Joana Santos", urlImage: "https://picsum.photos/200/300/?blur"),
   User(
       name: "Rodrigo Caio",
-      urlImage: "https://source.unsplash.com/MS0RHQ1enek/800x600"),
+      urlImage: "https://picsum.photos/seed/picsum/200/300"),
   User(
       name: "Pedro do Carmo",
-      urlImage: "https://source.unsplash.com/9ChfwZzv4ys/800x600"),
+      urlImage: "https://picsum.photos/200/300?grayscale"),
+];
+
+/* Lista de estórias */
+List<Story> story = [
+  Story(
+    user: usuariosOnline[0],
+    urlImage: "https://picsum.photos/seed/picsum/200/300",
+    isSee: true,
+  ),
+  Story(
+    user: usuariosOnline[1],
+    urlImage: "https://picsum.photos/200/300?grayscale",
+    isSee: true,
+  ),
+  Story(
+      user: usuariosOnline[2], urlImage: "https://picsum.photos/200/300/?blur"),
+  Story(
+      user: usuariosOnline[3],
+      urlImage: "https://picsum.photos/id/870/200/300?grayscale&blur=2"),
+  Story(
+      user: usuariosOnline[4],
+      urlImage: "https://picsum.photos/200/300?grayscale"),
+  Story(
+      user: usuariosOnline[5],
+      urlImage: "https://picsum.photos/200/300?grayscale"),
+  Story(
+      user: usuariosOnline[6],
+      urlImage: "https://picsum.photos/seed/picsum/200/300"),
+  Story(
+      user: usuariosOnline[7],
+      urlImage: "https://picsum.photos/200/300?grayscale"),
 ];

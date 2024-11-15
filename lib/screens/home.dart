@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:project_facebook/components/area_story.dart';
 import 'package:project_facebook/components/button_circle.dart';
 import 'package:project_facebook/components/create_post_area.dart';
 import 'package:project_facebook/data/data.dart';
@@ -18,6 +19,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: CustomScrollView(
         slivers: [
+          // app bar da pagina contem logo, barra de pesquisa e de mensager
           SliverAppBar(
             backgroundColor: Colors.white,
             floating: true,
@@ -44,9 +46,18 @@ class _HomeState extends State<Home> {
               ),
             ],
           ),
+          // area de postagem com avatar e input de pensamentos
+          //botoes ao vivo, foto e sala
           SliverToBoxAdapter(
             child: CreatePostArea(
               user: usuarioAtual,
+            ),
+          ),
+          // area de status
+          SliverPadding(
+            padding: EdgeInsets.fromLTRB(0, 10, 0, 5),
+            sliver: SliverToBoxAdapter(
+              child: AreaStory(user: usuarioAtual, storys: story),
             ),
           ),
           SliverToBoxAdapter(
