@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:project_facebook/components/button_circle.dart';
+import 'package:project_facebook/components/create_post_area.dart';
+import 'package:project_facebook/data/data.dart';
 import 'package:project_facebook/utils/palete_colors.dart';
 
 class Home extends StatefulWidget {
@@ -17,7 +19,7 @@ class _HomeState extends State<Home> {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            backgroundColor: Colors.orange,
+            backgroundColor: Colors.white,
             floating: true,
             centerTitle: false,
             //expandedHeight: 250,
@@ -41,6 +43,11 @@ class _HomeState extends State<Home> {
                 onPressed: () {},
               ),
             ],
+          ),
+          SliverToBoxAdapter(
+            child: CreatePostArea(
+              user: usuarioAtual,
+            ),
           ),
           SliverToBoxAdapter(
             child: Container(

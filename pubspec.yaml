@@ -36,6 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   #https://pub.dev/packages/line_icons
   line_icons: ^2.0.3
+  #https://pub.dev/packages/cached_network_image
+  cached_network_image: ^3.4.1
 
 dev_dependencies:
   flutter_test:
