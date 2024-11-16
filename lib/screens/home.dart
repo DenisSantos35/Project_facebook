@@ -57,6 +57,7 @@ class _HomeState extends State<Home> {
           ),
           // area de status
           SliverPadding(
+            // ignore: prefer_const_constructors
             padding: EdgeInsets.fromLTRB(0, 10, 0, 5),
             sliver: SliverToBoxAdapter(
               child: AreaStory(user: usuarioAtual, storys: story),
