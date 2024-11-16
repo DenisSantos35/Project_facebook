@@ -3,7 +3,9 @@ import 'package:line_icons/line_icons.dart';
 import 'package:project_facebook/components/area_story.dart';
 import 'package:project_facebook/components/button_circle.dart';
 import 'package:project_facebook/components/create_post_area.dart';
+import 'package:project_facebook/components/post_card.dart';
 import 'package:project_facebook/data/data.dart';
+import 'package:project_facebook/models/models.dart';
 import 'package:project_facebook/utils/palete_colors.dart';
 
 class Home extends StatefulWidget {
@@ -60,10 +62,13 @@ class _HomeState extends State<Home> {
               child: AreaStory(user: usuarioAtual, storys: story),
             ),
           ),
-          SliverToBoxAdapter(
-            child: Container(
-              color: Colors.green,
-              height: 1800,
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (BuildContext context, int index) {
+                Posts post = posts[index];
+                return PostCard(post: post);
+              },
+              childCount: posts.length,
             ),
           )
         ],
